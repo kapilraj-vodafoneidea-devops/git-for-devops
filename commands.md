@@ -1,127 +1,92 @@
- "git":
-            echo "Related commands for Git:"
-            echo "1. git status - Show the working tree status."
-            echo "2. git add . - Add all changes to staging."
-            echo "3. git commit -m 'message' - Commit changes with a message."
-            echo "4. git branch -a - List all branches."
-            echo "5. git checkout [branch] - Switch to another branch."
-            Here’s a step-by-step guide to using Git, from setting up a repository to pushing changes to a remote repository like GitHub or GitLab.
+# Command Reference Guide
 
-Step-by-Step Git Workflow
-1. Setup Git (One-time setup)
-Configure your Git environment:
+## 1. File System Management
 
-bash
-Copy code
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-Verify the configuration:
+### Creating Directories
+mkdir git for devops
+mkdir file2
 
-bash
-Copy code
-git config --list
-2. Initialize a Git Repository
-Navigate to your project directory and initialize a new Git repository:
+### Listing Files
+ls
+ls -al
 
-bash
-Copy code
-cd /path/to/your/project
+### Navigating Directories
+cd git
+cd mkdir for devops
+pwd
+
+### Creating Files
+touch nibba.txt nibbi.txt
+touch file1
+touch pwd.txt
+
+---
+
+## 2. Git Basics
+
+### Initializing a Repository
 git init
-3. Add Files to the Repository
-Add all the files in the project to the staging area:
 
-bash
-Copy code
-git add .
-To add a specific file, use:
-
-bash
-Copy code
-git add filename
-4. Check the Status
-Before committing, check the current status of your files:
-
-bash
-Copy code
+### Checking Status
 git status
-This shows which files are staged for the next commit and which are not.
 
-5. Commit Changes
-Once you've staged the files, commit them to the repository with a message:
+### Adding Files to Staging
+git add nibbi.txt
+git add nibba.txt
+git add pwd.txt
+git add file1
+git add file2
+git add .
 
-bash
-Copy code
-git commit -m "Your commit message"
-6. Create a New Branch (Optional)
-If you're working on a feature or bug fix, it's a good practice to create a new branch:
+### Removing Files from Staging
+git rm --cached nibba.txt
 
-bash
-Copy code
-git branch feature-branch-name
-git checkout feature-branch-name
-Or use a single command to create and switch to the new branch:
+### Committing Changes
+git commit -m "add nibba and nibbi"
+git commit -m "adding new file"
+git commit -m "another file"
 
-bash
-Copy code
-git checkout -b feature-branch-name
-7. Connect to a Remote Repository
-If you’re working with a remote repository (e.g., GitHub or GitLab), add the repository URL:
+---
 
-bash
-Copy code
-git remote add origin https://github.com/username/repository.git
-8. Push to Remote Repository
-If it's the first push, you need to specify the branch explicitly:
+## 3. Branch Management
 
-bash
-Copy code
-git push -u origin master
-For subsequent pushes, you can use:
-
-bash
-Copy code
-git push
-9. Pull Updates from Remote
-To pull the latest changes from the remote repository to your local branch:
-
-bash
-Copy code
-git pull
-10. Merge Branches
-Once your feature is ready, switch back to the main branch and merge the feature branch:
-
-bash
-Copy code
+### Creating and Switching Branches
+git branch
+git branch -b dev
+git checkout -b dev
 git checkout master
-git merge feature-branch-name
-11. Resolve Conflicts (If Any)
-During the merge, you might encounter conflicts. Git will show you which files have conflicts. Open those files, resolve the conflicts, and then:
+git checkout dev
 
-bash
-Copy code
-git add conflict-file
-git commit -m "Resolved conflict"
-12. Delete the Feature Branch
-After merging, you can delete the feature branch:
+### Viewing Branches
+git branch
 
-bash
-Copy code
-git branch -d feature-branch-name
-13. View the Commit Log
-To view the history of commits in the repository:
+---
 
-bash
-Copy code
+## 4. Git Logs and History
+
+### Viewing Commit History
 git log
-Summary of Common Git Commands:
-Step	Command	Description
-Setup	git config --global user.name "Your Name"	Set up Git name
-Initialize	git init	Initialize a Git repository
-Add files	git add .	Stage all files
-Commit	git commit -m "Message"	Commit staged files
-Branch	git checkout -b branch-name	Create and switch to new branch
-Remote	git remote add origin <url>	Add remote repository URL
-Push	git push	Push changes to remote
-Pull	git pull	Pull changes from remote
-Merge	git merge branch-name	Merge a branch into the current branch
-Log	git log	View commit history
+git log --oneline
+git logs
+
+### Resetting Commits
+git reset
+git reset --soft 1a03e18
+
+---
+
+## 5. Git Configuration
+
+### Setting Global Configurations
+git config --global user.email "kapilrajc05@gmail.com"
+git config --global user.name "kapilraj.vidafoneidea"
+
+---
+
+## 6. Exiting and History
+
+### Exiting Terminal
+exit
+
+### Viewing Command History
+history
