@@ -1,3 +1,3 @@
 # git-for-devops
 
-this repository is for understanding the concept of Devops
+this repository is for understanding the GIT concept of Devops
